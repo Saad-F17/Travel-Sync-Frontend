@@ -1,0 +1,398 @@
+{% extends 'parent.html' %}
+{% load static %}
+{% block body %}
+
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Enquiry Form</h1><br>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>{% if msg %}
+          <p style="text-align: center; color: blue;">{{msg}}</p>
+          {% endif %}
+          We will contact you soon
+        </h5>
+        <form id="contact_form" name="contact_form" method="post">
+          {% csrf_token %}
+          <div class="mb-2 row">
+            <div class="col">
+              <label> Name</label>
+
+              <input type="text" name="name" placeholder="Enter name" required class="form-control" />
+            </div>
+
+          </div>
+          <div class="mb-2 row">
+            <div class="col">
+              <label for="email_addr">Email address</label>
+              <input type="text" name="emailaddress" placeholder="enter email address" required class="form-control" />
+            </div>
+            <div class="col">
+              <label for="phone_input">Phone</label>
+              <input type="number" name="contactno" placeholder="enter contact number" required class="form-control" />
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="message">Message</label>
+            <textarea name="message" class="form-control"></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark px-4 btn-lg">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Slider-->
+<div class="row ">
+  <div class="col-sm-12 px-0">
+    <div id="carouselExampleCaptions" class="carousel slide  carousel-fade" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active data-bs-interval=2000 bg-dark">
+          <img src="{% static 'images//Banner4.jpg' %}" class="d-block w-100 opacity-image  img-fluid" alt="...">
+        </div>
+        <div class="carousel-item data-bs-interval=4000 bg-dark ">
+          <img src="{% static 'images//Banner3.jpg' %}" class="d-block w-100 opacity-image img-fluid" alt="...">
+        </div>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item  data-bs-interval=6000 bg-dark">
+          <img src="{% static 'images//Banner2.jpg' %}" class="d-block w-100 opacity-image img-fluid" alt="...">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<!--Slider-->
+<!--Call Button-->
+<div class="row">
+  <a href="tel:8887993223" class="btn cbtn"><i class="fa-solid fa-phone"></i></a>
+</div>
+<!--Call Button-->
+<!--Whatsapp button-->
+<div class="row">
+  <a href="tel:8887993223" class="btn wbtn"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+<!--Whatsapp button-->
+<!--Detail Name Section-->
+<div class="row mt-4">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-5">
+
+
+    <p style="text-align:center;" class="fs-5 pt-5"><strong>You'll never travel without our trip planner again
+        Build, organize, and map your itineraries in a free travel app designed for vacations & road trips</strong> </p>
+    <p style="text-align:center;" class="fs-5"><strong>So many trips, so little time. Let TripIt worry about the
+        details, so you don't have to.</strong></p>
+
+  </div>
+  <div class="col-sm-5"><button type="button" class="btn call-btn "
+      style="position:relative;top:100px;left:250px;height:60px;width:200px;"><a class="nav-link"
+        href="{% url 'myapp:registration' %}">Get Started by Registering Yourself</a></button></div>
+  <div class="col-sm-1"></div>
+</div>
+<!--Detail Name Section-->
+
+<!--Our Services-->
+<div class="conatiner mt-5">
+  <h2 class="text-center" style="color:black;">Destinations</h2>
+  <hr class="w-25 mx-auto my-3" style="color:black">
+  <div class="row pt-4">
+    <div class=" col-12 col-sm-6 col-md-4 mx-auto my-3 d-flex justify-content-center align-items-center">
+
+      <div class="card " style="width: 18rem;">
+        <a href="{% url 'myapp:manali' %}"><img src="{% static 'images//manali.jpeg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center text-light" style="background-color:#374045;">
+          <a href="{% url 'myapp:manali' %}" style="color: inherit; /* Inherit color from parent element */
+          text-decoration: none; ">
+            <h5 class="card-title fw-bold">Manali</h5>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class=" col-12 col-sm-6 col-md-4 mx-auto my-3 d-flex justify-content-center align-items-center">
+
+      <div class="card " style="width: 18rem;">
+        <a href="{% url 'myapp:varanasi' %}"><img src="{% static 'images//varanasi.jpeg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center text-light" style="background-color:#374045;">
+          <a href="{% url 'myapp:varanasi' %}" style="color: inherit; /* Inherit color from parent element */
+          text-decoration: none; ">
+            <h5 class="card-title fw-bold">Varanasi</h5>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class=" col-12 col-sm-6 col-md-4 mx-auto my-3 d-flex justify-content-center align-items-center">
+      <div class="card " style="width: 18rem;">
+        <a href="#"><img src="{% static 'images//mussorie.jpg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center text-light" style="background-color:#374045;">
+          <a href="#" style="color: inherit; /* Inherit color from parent element */
+        text-decoration: none; ">
+            <h5 class="card-title fw-bold">Mussoorie</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="row pt-4">
+    <div class=" col-12 col-sm-6 col-md-4 mx-auto my-3 d-flex justify-content-center align-items-center">
+      <div class="card " style="width: 18rem;">
+        <a href="#"><img src="{% static 'images//L.jpg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center text-light" style="background-color:#374045;">
+          <a href="#" style="color: inherit; /* Inherit color from parent element */
+          text-decoration: none; ">
+            <h5 class="card-title fw-bold">Ladhak</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class=" col-12 col-sm-6 col-md-4 mx-auto my-3 d-flex justify-content-center align-items-center">
+      <div class="card" style="width: 18rem;">
+        <a href="#"><img src="{% static 'images//Kashmir.jpg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center text-light" style="background-color:#374045; ">
+          <a href="#" style="color: inherit; /* Inherit color from parent element */
+            text-decoration: none; ">
+            <h5 class="card-title fw-bold">Kashmir</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class=" col-12 col-sm-6 col-md-4 mx-auto my-3 d-flex justify-content-center align-items-center">
+      <div class="card " style="width: 18rem;">
+        <a href="#"><img src="{% static 'images//Jaipur.jpg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center text-light" style="background-color:#374045;">
+          <a href="#" style="color: inherit; /* Inherit color from parent element */
+          text-decoration: none; ">
+            <h5 class="card-title fw-bold">Jaipur</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<!--Our Services-->
+<!--Testinomial-->
+<div class="container mt-5">
+  <h2 class="text-center mb-2" style="color:black;">Voice From the road</h2>
+  <hr class="w-25 mx-auto my-3" style="color:black">
+  <h3 class="text-center mb-4 mt-0" style="color:black;">Real stories from real road trips</h3>
+  <div class="owl-carousel owl-theme testimonial-container">
+    <!-- Testimonial 1 -->
+    <div class="item">
+      <div class="card testimonial-shadow">
+        <div class="card-body">
+          <p class="card-text">"How I Spent Last Summer Driving Across the Country to Shoot a Documentary About
+            Bookstores"</p>
+          <h5 class="card-title">Tushar Verma</h5>
+          <p class="">Jun 12th 2023</p>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial 2 -->
+    <div class="item">
+      <div class="card testimonial-shadow">
+        <div class="card-body">
+          <p class="card-text">"What Happens when a Family of Five Wins Trip to South Dakota and Turns it into a Road
+            Trip"</p>
+          <h5 class="card-title">Shara Fahima</h5>
+          <p class="">July 15th 2022</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more testimonials as needed -->
+    <div class="item">
+      <div class="card testimonial-shadow">
+        <div class="card-body">
+          <p class="card-text">"How I Lost my Job and Found my True Calling on a Cross Country RoadTrip."</p>
+          <h5 class="card-title">Daryush Assar</h5>
+          <p class="">July 1st 2023</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card testimonial-shadow">
+        <div class="card-body">
+          <p class="card-text">"Retracing our Newlywed Roadtrip 15 years later with a Bigger Car ,3 Kids and a lot More
+            Snow "</p>
+          <h5 class="card-title">Prateek</h5>
+          <p class="">Jan 16th 2022</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card testimonial-shadow">
+        <div class="card-body">
+          <p class="card-text">"A Campervan road Trip to Death Valley with a 3-month old and a toddler"</p>
+          <h5 class="card-title">Michelle Dimayuga</h5>
+          <p class="">Jan 23rd 2020</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card testimonial-shadow">
+        <div class="card-body">
+          <p class="card-text">"How a road Trip Helped me find a new sense of self after dealing with illness and pain"
+          </p>
+          <h5 class="card-title">Anurag Rai</h5>
+          <p class="">May 12th 2022</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card testimonial-shadow">
+        <div class="card-body">
+          <p class="card-text">"Moose,mountains and madness: Turning a poorly planned road trip into a monumental
+            adventure"</p>
+          <h5 class="card-title">Archana</h5>
+          <p class="">Aug 16th 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Testinomial-->
+<!--ACCORDIAN FAQ-->
+<div class="row mt-5">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h2 class="text-center mb-4 mt-4" style="color:#331d2c;">Frequently Asked Questions</h2>
+    <hr class="w-25 mx-auto my-3" style="color:#331d2c;">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item faq">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne">
+            Are flights and airport transfers included in the trip price?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            All transport during your trip is included in your trip price. Check your Essential Trip Information and
+            itinerary for a full list of what’s included.Transfers to and from your trip aren’t included in your trip
+            price.
+            Some trip styles have transfers included, so please check your Essential Trip Information and itinerary for
+            a full list of what’s included.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item faq">
+        <h2 class="accordion-header mt-2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo">
+            Does the itinerary include recommendations for dining and entertainment?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, our itinerary generator can suggest dining options, attractions, and entertainment based on your
+            preferences and the destination you're visiting. You can also customize these recommendations to suit your
+            tastes
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item faq">
+        <h2 class="accordion-header mt-2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree">
+            Is my personal information secure when using the itinerary generator?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, we take the security and privacy of your personal information seriously. We use encryption and other
+            security measures to protect your data and ensure it is not shared with third parties without your consent.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<!--ACCORDIAN FAQ-->
+<!--Get in touch-->
+<div class="row mt-5">
+  <div class="col-sm-6">
+    <div class="card mt-4 mx-5" style="box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;">
+      <div class="card-body">
+        <h5>Message Us for Help</h5>
+        <form method="post" action="https://api.web3forms.com/submit">
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Your Name</label>
+            <input type="hidden" name="access_key" value="2de32c28-bbcb-4775-8da6-ac10a468a70e">
+
+            <input type="text" class="form-control" id="exampleInputPassword1" name="name">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" name="Phone">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Your Message</label>
+            <input type="Text" class="form-control" id="exampleInputPassword1" name="message">
+          </div>
+
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-5 mt-5 text-center">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.270705566064!2d80.99540157402072!3d26.95832545813154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bff2addd9b239%3A0xc21a9bbd557936ec!2sIntegral%20University!5e0!3m2!1sen!2sin!4v1715527947410!5m2!1sen!2sin"
+      width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+<!--Get in touch-->
+
+{% endblock body%}

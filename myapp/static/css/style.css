@@ -1,0 +1,159 @@
+.nav-custom {
+  background-color: #374045;
+}
+.toggle {
+  background-color: black;
+}
+.navbar-nav .nav-link {
+  color: white;
+}
+.navbar-brand {
+  color: white;
+ 
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  margin: 0 auto;
+}
+.bg-light {
+  background-color: transparent;
+}
+.opacity-image {
+  opacity: 0.6; /* Adjust the opacity value as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel-caption {
+  bottom: 220px;
+}
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.carousel-caption p {
+  margin: auto;
+  width: 60%;
+  line-height: 1.9;
+  font-size: 18px;
+}
+.carousel-caption a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background: darkorange;
+  padding: 10px 30px;
+  display: inline-block;
+  color: #000;
+  margin-top: 15px;
+}
+.call-btn {
+  background-color: #FEC260;
+}
+.call-btn:hover {
+  background-color: #E1D89F; /* Change background color on hover */
+  cursor: pointer;
+  border-color: black;
+}
+
+.modal-dialog {
+  max-width: 800px; /* Adjust the maximum width of the modal */
+}
+.modal-body {
+  background-color: #E1D89F;
+}
+.modal-header {
+  background-color: #E1D89F;
+}
+.cbtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #FEC260;
+  width: 60px;
+  border-radius: 50% !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  line-height: 45px !important;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.cbtn:hover {
+  background-color: #E1D89F; /* Change background color on hover */
+  cursor: pointer;
+  border-color: black;
+}
+.wbtn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #FEC260;
+  width: 60px;
+  border-radius: 50% !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  line-height: 45px !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.wbtn:hover {
+  background-color: #E1D89F; /* Change background color on hover */
+  cursor: pointer;
+  border-color: black;
+}
+.faq {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.accordion-header:focus {
+  outline: none;
+}
+.footer-1{
+  text-align: center;
+  color: black;
+}
+.f{
+  border-radius: 50%;
+  background-color: black;
+}
+
+
+.footer-list{
+  list-style-type: none;
+}
+.footer-a{
+  color: inherit; /* Inherit color from parent element */
+      text-decoration: none; 
+}
+.end{
+  background-color: black;
+}
+.accordion {
+  --bs-accordion-btn-focus-box-shadow: none; /* Removes the focus box shadow. Not recommended to remove this. */
+  --bs-accordion-btn-focus-border-color: #fff; /* Sets the border color. accordion-button doesn't have a border by the way. */
+  --bs-accordion-active-bg: #fff; /* Sets the background color. */
+}
+.location{
+  background-color: #FEC260;
+  margin-top: 56px;
+}
+.testimonial-shadow{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border:  solid #374045;
+}
+.services{
+  color: inherit; /* Inherit color from parent element */
+  text-decoration: none; 
+}
+.sign{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+

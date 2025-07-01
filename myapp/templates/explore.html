@@ -1,0 +1,31 @@
+{% extends "parent.html" %}
+{% load static %}
+{% block body %}
+<div class="row subsequent-div">
+    <div class="col-sm-12 ">
+<h1 class="" style="text-align:center;">EXPLORE</h1>
+<hr class="w-25  mx-auto my-2" style="color:black">
+<h5 style="text-align:center;"></h5>
+</div> 
+</div>
+<div class="row">
+    <div class="card mb-3">
+        <img src="{% static 'images//manali.jpeg' %}" height="450px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Manali</h5>
+          <p class="card-text">A gift of the Himalayas to the world, Manali is a beautiful township nestled in the picturesque Beas River valley. It is a rustic enclave known for its cool climate and snow-capped mountains, offering respite to tourists escaping scorching heat of the plains.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 days ago</small></p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <img src="{% static 'images//varanasi.jpeg' %}" height="450px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Varanasi</h5>
+          <p class="card-text">The land of Varanasi (Kashi) has been the ultimate pilgrimage spot for Hindus for ages. Hindus believe that one who is graced to die on the land of Varanasi would attain salvation and freedom from the cycle of birth and re-birth.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 6 days ago</small></p>
+        </div>
+      </div>
+<h3>More Coming Soon</h3>
+  
+</div>
+{% endblock body %}

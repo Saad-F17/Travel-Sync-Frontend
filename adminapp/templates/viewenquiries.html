@@ -1,0 +1,36 @@
+{% extends "adminparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">View All Enquiries</h1>   
+            <table class="table text-light" style="margin: auto;">
+                <tr style="color: black;">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Contact Us</th>
+                    <th>Email Address</th>
+                    <th>Message</th>
+                    <th>Posted Date</th>
+                    <th></th>
+                </tr>
+                {% for e in enq %}
+                <tr style="color: black;">
+                    <td>{{e.id}}</td>
+                    <td>{{e.name}}</td>
+                    <td>{{e.contactno}}</td>
+                    <td>{{e.emailaddress}}</td>
+                   
+                    <td>{{e.message}}</td>
+                    <td>{{e.posteddate}}</td>
+                    <td>
+                        
+                        <a href="{% url 'adminapp:delenq' id=e.id %}">
+                            <button type="button" class="btn btn-primary">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock body %}

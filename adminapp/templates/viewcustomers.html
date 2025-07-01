@@ -1,0 +1,28 @@
+{% extends "adminparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">View all Customer</h1>   
+              <table class="table text-light" style="margin: auto;">
+                <tr style="color: black;">
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Contact Us</th>
+                    <th>Email Address</th>
+                    <th>Registeration Date</th>
+                </tr>
+                {% for c in cust %}
+                <tr style="color: black;">
+                    <td>{{c.name}}</td>
+                    <td>{{c.gender}}</td>
+                    <td>{{c.address}}</td>
+                    <td>{{c.contactno}}</td>
+                    <td>{{c.emailaddress}}</td>
+                    <td>{{c.regdate}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock body %}

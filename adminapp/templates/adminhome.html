@@ -1,0 +1,39 @@
+{% extends "adminparent.html" %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">Dashboard</h1>   
+            <div class="container">
+    
+                <div class="row">
+            
+                <div class="four col-md-4">
+                    <div class="counter-box colored">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <span class="counter">{{coucust}}</span>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+                <div class="four col-md-4">
+                    <div class="counter-box colored">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="counter">{{coureg}}</span>
+                        <p>Registered Members</p>
+                    </div>
+                </div>
+                <div class="four col-md-4">
+                    <div class="counter-box colored">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <span class="counter">{{couenq}}</span>
+                        <p>Enquiries</p>
+                    </div>
+                </div>
+                
+              </div>	
+            </div>      
+        </div>
+
+    </div>
+{% endblock body %}
